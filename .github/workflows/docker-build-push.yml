@@ -32,7 +32,7 @@ jobs:
 
       - name: Build & Push Docker Image
         run: |
-          IMAGE=${{ secrets.DOCKER_USERNAME }}/demo_app
+          IMAGE=${{ secrets.DOCKER_USERNAME }}/demoapp
           TAG=${GITHUB_SHA::7}
           docker build -t $IMAGE:$TAG -t $IMAGE:latest .
           docker push $IMAGE:$TAG
